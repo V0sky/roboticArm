@@ -1,7 +1,7 @@
 # roboticArm
 This project consists of front-end and back-end apps for manual as well as autonomous control of a robotic arm.
 
-BACK-END
+### BACK-END
 1) Arm_test.py:
    WebSocket server waiting for a JSON file from a GUI (mainly for manual control of the arm).
    
@@ -18,7 +18,7 @@ BACK-END
    A file with the core of all the servos' moves control.
 
 
-FRONT-END
+### FRONT-END
 1) index.html:
    Mainpage for manual control.
 

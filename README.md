@@ -1,5 +1,5 @@
 # roboticArm
-This project consists of front-end and back-end apps for manual as well as autonomous control of a robotic arm.
+This project consists of front-end and back-end apps for the manual as well as the autonomous control of a robotic arm.
 
 ### BACK-END
 1) **Arm_test.py:**

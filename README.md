@@ -12,7 +12,7 @@ This project consists of front-end and back-end apps for the manual as well as t
    Pseudo-cofig file with a parameters for autonomous movements and for the user to change them in accordance with their needs.
 
 4) **led.py:**
-   File with a basic programme for LED light indication (neccessary for indicating that RPI is running as well as the servers on it).
+   File with a basic programme for LED light indication (necessary for indicating that RPI is running as well as the servers on it).
 
 5) **move.py:**
    A file with the core of all the servos' moves control.

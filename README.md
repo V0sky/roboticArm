@@ -29,5 +29,5 @@ FRONT-END
    For API requests purposes.
 
 4) websoc.js:
-   For creating JSON files, sending via wesockets and GUI buttons functionality.
+   For creating JSON files sent via wesockets and GUI buttons functionality.
 

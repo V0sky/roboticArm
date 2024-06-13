@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/sliders_style.css">
+        <title>RoboManipulator</title>
+        <link rel="icon" type="image/png" href="img/icon.png">
+    </head>
+    
+    <body>
+
+        <h1>Robotic Manipulator Control</h1>
+        <hr id="hr1">
+        <textarea id="conStat" readonly></textarea>
+        <hr>
+        <h2>Choose the End-Effector</h2>
+
+        <div class="container">
+            <button onclick="hideAllSliders()" class="bt_1" id="sliderBtn"><img class="endEffectorImage" src="img/EE_1.png" alt="bottle holder"></button>
+            <button onclick="changeSliders()" class="bt_2" id="sliderBtn"><img class="endEffectorImage" src="img/EE_2.png" alt="end-effector without rotation"></button>
+            <button onclick="showAllSliders()" class="bt_3" id="sliderBtn"><img class="endEffectorImage" src="img/EE_3.png" alt="rotational end-effector"></button>
+        </div>
+
+        <div class="sliders" id="sliders_all">      
+            <div class="slidecontainer" id="slider1">
+                <p>Joint 1 - Base servo: <span class="degree" id="baseValue">115</span> degrees</p>
+                <input type="range" min="0" max="180" value="115" step="1" class="slider" id="myRange1">
+            </div>
+
+            <div class="slidecontainer" id="slider2">
+                <p>Joint 2 - Shoulder servo: <span class="degree" id="shoulderValue">0</span> degrees</p>
+                <input type="range" min="0" max="180" value="0" step="1" class="slider" id="myRange2">
+            </div>
+
+            <div class="slidecontainer" id="slider3">
+                <p>Joint 3 - Elbow servo: <span class="degree" id="elbowValue">180</span> degrees</p>
+                <input type="range" min="0" max="180" value="180" step="1" class="slider" id="myRange3">
+            </div>
+
+            <div class="slidecontainer" id="slider4">
+                <p>Joint 4 - Wrist servo: <span class="degree" id="wristValue">130</span> degrees</p>
+                <input type="range" min="0" max="300" value="130" step="1" class="slider" id="myRange4">
+            </div>
+
+            <div class="slidecontainer" id="slider5" >
+                <p>Joint 5 - Wrist servo rotational: <span class="degree" id="rotValue">140</span> degrees</p>
+                <input type="range" min="0" max="180" value="140" step="1" class="slider" id="myRange5">
+            </div>
+
+            <div class="slidecontainer" id="slider6">
+                <p>Claws operator: <span class="degree" id="clawValue">0</span> degrees</p>
+                <input type="range" min="0" max="65" value="0" step="1" class="slider" id="myRange6">
+            </div>
+
+            <div class="slidecontainer" id="slider7">
+                <p>Claws 2 operator: <span class="degree" id="clawValue2">0</span> degrees</p>
+                <input type="range" min="0" max="80" value="0" step="1" class="slider" id="myRange7">
+            </div>
+        </div>
+        <hr id="hr2">
+        <h2 id="manualJointText">Set values of the joints together</h2>
+        
+        <div id="pageBlock2">
+            <div id="btnsAndSlideText">
+                <div id="angleButtons">
+                    <div id="homeButton"><button onclick="homePos()" class="home_Bt"><img id="homeImage" src="img/home.png" alt="home position"></button></div>
+                    <div id="anglButtonDiv"><div id="angleButton"><button onclick="setAnglesManualy()" class="angle_Bt">SET ANGLES</button></div></div>
+                </div>
+                <div id="textBoxesDiv">
+                    <div id="textBoxes">
+                        <label>J1 servo (0-180)</label>
+                        <div id="slideTextDiv1"><input class="jointTextBox" type="number" id="slideText1" min="0" max="180" value="115"></div>
+                        <label>J2 servo (0-180)</label>
+                        <div id="slideTextDiv2"><input class="jointTextBox" type="number" id="slideText2" min="0" max="180" value="0"></div>
+                        <label>J3 servo (0-180)</label>
+                        <div id="slideTextDiv3"><input class="jointTextBox" type="number" id="slideText3" min="0" max="180" value="180"></div>
+                        <label>J4 servo (0-300)</label>
+                        <div id="slideTextDiv4"><input class="jointTextBox" type="number" id="slideText4" min="0" max="300" value="130"></div>
+                        <label>J5 servo (0-180)</label>
+                        <div id="slideTextDiv5"><input class="jointTextBox" type="number" id="slideText5" min="0" max="180" value="140"></div>
+                        <label>J6 servo (0-65)</label> 
+                        <div id="slideTextDiv6"><input class="jointTextBox" type="number" id="slideText6" min="0" max="65" value="0"></div>
+                        <label>J7 servo (0-80)</label> 
+                        <div id="slideTextDiv7"><input class="jointTextBox" type="number" id="slideText7" min="0" max="80" value="0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "substituteSlider1" id="subSlider1">
+            <p id="p_auto_status">AUTO STATUS ACTIVATED</p>
+            <p id="p_communication">COMMUNICATING WITH A VEHICLE</p>
+        </div>
+  
+    </body>
+
+    <script src="index.js"></script>
+    <script src="websoc.js"></script>
+    <script src="jsApi.js"></script>
+    
+</html>
